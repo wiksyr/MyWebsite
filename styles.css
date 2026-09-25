@@ -1,0 +1,430 @@
+* {
+    box-sizing: border-box;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+}
+
+body {
+    margin: 0;
+}
+
+body.shell-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+}
+
+#hamburger {
+    order: 2;
+    background: none;
+    border: none;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+#support-button {
+    order: 2;
+    margin-right: 12px;
+    padding: 8px 16px;
+    background-color: #ff813f;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+#support-button:hover {
+    background-color: #e56c2c;
+}
+
+#hamburger span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: #ecf0f1;
+    border-radius: 2px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#logo {
+    order: 1;
+    height: 32px;
+}
+
+#hamburger.open span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+#hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+#hamburger.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+nav {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+}
+
+nav.open {
+    max-height: 500px;
+}
+
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 14px 20px;
+    cursor: pointer;
+}
+
+nav a:hover {
+    background-color: rgb(52, 73, 94);
+}
+
+nav a.active {
+    background-color: rgb(2, 84, 165, 0.5);
+    color: #fff;
+}
+
+#breadcrumb {
+    background-color: black;
+    color: white;
+    padding: 8px 16px;
+    font-size: 18px;
+    text-align: center;
+    border-bottom: 1px solid #d0d5d8;
+}
+
+iframe {
+    flex: 1;
+    width: 100%;
+    border: none;
+}
+
+/* Dark themed content pages (about, services, galleries, etc.) */
+body.dark-page {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #111111;
+}
+
+body.dark-page h2 {
+    text-align: center;
+    margin-top: 24px;
+}
+
+body.dark-page h3 {
+    text-align: center;
+    margin-top: 16px;
+}
+
+/* Home page */
+body.home-page {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url("assets/images/mbr-1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+.logo-icon {
+    height: 100px;
+    margin: 16px 0;
+}
+
+/* Bio text (about page) reuses .container without the dark overlay look */
+body.about-page .container {
+    background-color: transparent;
+    color: #111111;
+}
+
+@media (max-width: 700px) {
+    body.about-page .container p {
+        font-size: 10px;
+    }
+}
+
+.hashes-container {
+    width: 80%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 16px 0;
+    margin-top: 120px;
+    color: coral;
+    font-weight: bold;
+}
+
+.hashes {
+    font-style: italic;
+    margin: 0;
+    color: cornflowerblue;
+    font-weight: bold;
+}
+
+.coffee-button {
+    align-self: center;
+    margin-top: 32px;
+    margin-left: 5%;
+    padding: 14px 24px;
+    background-color: #ff813f;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.coffee-button:hover {
+    background-color: rgb(229, 108, 44);
+    align-items: center;
+}
+
+/* Video + slideshow (about page) */
+.video-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 0;
+    width: min(900px, calc(100% - 32px));
+    margin: 24px auto;
+    padding: 16px;
+}
+
+.video-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 150px;
+    background-color: rgba(2, 84, 165, 0.5);
+    border-radius: 8px 0 0 8px;
+    overflow: hidden;
+    padding: 8px;
+}
+
+.video-wrapper video {
+    width: clamp(140px, 45%, 350px);
+    aspect-ratio: 9 / 16;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.video-container .divider {
+    width: 50%;
+    border: none;
+    border-top: 1px solid white;
+}
+
+.video-comment {
+    text-align: center;
+    font-size: 16px;
+    color: black;
+    background-color: rgba(2, 84, 165, 0.5);
+    border-radius: 0 8px 8px 0;
+    padding: 16px 24px;
+    flex: 1;
+}
+
+@media (max-width: 701px) {
+    .video-comment {
+        font-size: 10px;
+    }
+}
+
+/* Slideshow (about, services pages) */
+.slideshow {
+    position: relative;
+    width: 50%;
+    height: 400px;
+    margin: 24px auto 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.slideshow .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease-in-out;
+}
+
+.slideshow .slide.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.slideshow .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.slideshow .slide figcaption {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.slideshow .slide figcaption a {
+    color: coral;
+}
+
+body.services-page .slideshow {
+    height: 200px;
+}
+
+/* Gallery (services, MaliPrzyjaciele pages) */
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 0;
+}
+
+/* Gallery grid, 3 items per row (about page) */
+body.about-page .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: min(900px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+body.about-page .gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+    color: white; 
+    background-color: rgba(2, 84, 165, 0.5);
+}
+
+body.about-page .gallery-item img {
+    width: 100%;
+    display: block;
+}
+
+body.about-page .gallery-item .overlay {
+    text-align: center;
+    padding: 16px 24px;
+}
+
+@media (max-width: 700px) {
+    body.about-page .gallery {
+        gap: 8px;
+    }
+
+    body.about-page .gallery-item .overlay {
+        padding: 6px 8px;
+        font-size: 10px;
+    }
+}
+
+/* Gallery with color-overlay swatch on top of each image (services page) */
+body.services-page .gallery-item {
+    position: relative;
+    width: 50%;
+}
+
+body.services-page .gallery-item img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+body.services-page .gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white; 
+    background-color: rgba(2, 84, 165, 0.5);
+    border-radius: 8px;
+}
+@media (max-width: 700px) {
+    body.services-page .gallery {
+        gap: 8px;
+    }
+
+    body.services-page .gallery-item .overlay {
+        padding: 6px 8px;
+        font-size: 10px;
+    }
+}
+
+/* Gallery with image + description merged into one card (MaliPrzyjaciele page) */
+body.mali-page .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: min(900px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+body.mali-page .gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+    color: white; 
+    background-color: rgba(2, 84, 165, 0.5);
+}
+
+body.mali-page .gallery-item img {
+    width: 100%;
+    display: block;
+}
+
+body.mali-page .gallery-item .overlay {
+    text-align: center;
+    padding: 16px 24px;
+}
+
+@media (max-width: 700px) {
+    body.mali-page .gallery {
+        gap: 8px;
+    }
+
+    body.mali-page .gallery-item .overlay {
+        padding: 6px 8px;
+        font-size: 10px;
+    }
+}
