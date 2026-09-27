@@ -93,6 +93,7 @@ nav.open {
 nav a {
     color: #ecf0f1;
     text-decoration: none;
+    text-align: center;
     padding: 14px 20px;
     cursor: pointer;
 }
@@ -102,7 +103,7 @@ nav a:hover {
 }
 
 nav a.active {
-    background-color: rgb(2, 84, 165, 0.5);
+    background-color: coral;
     color: #fff;
 }
 
@@ -153,6 +154,15 @@ body.home-page {
     justify-content: center;
 }
 
+/* Wesołe Maluchy page */
+body.wesole-maluchy-page {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("assets/images/logo-wesole-maluchhy.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .container {
     text-align: center;
     color: #fff;
@@ -198,7 +208,6 @@ body.about-page .container {
 .coffee-button {
     align-self: center;
     margin-top: 32px;
-    margin-left: 5%;
     padding: 14px 24px;
     background-color: #ff813f;
     color: #fff;
@@ -226,13 +235,26 @@ body.about-page .container {
     padding: 16px;
 }
 
+body.keep-blue-page .keep-blue-video {
+    justify-content: center;
+    background-color: black;
+    border-radius: 8px;
+}
+
+body.keep-blue-page .keep-blue-video video {
+    display: block;
+    width: min(100%, 480px);
+    max-height: 80vh;
+    object-fit: contain;
+}
+
 .video-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     flex: 0 0 auto;
     width: 150px;
-    background-color: rgba(2, 84, 165, 0.5);
+    background-color: black;
     border-radius: 8px 0 0 8px;
     overflow: hidden;
     padding: 8px;
@@ -255,8 +277,8 @@ body.about-page .container {
 .video-comment {
     text-align: center;
     font-size: 16px;
-    color: black;
-    background-color: rgba(2, 84, 165, 0.5);
+    color: white;
+    background-color: black;
     border-radius: 0 8px 8px 0;
     padding: 16px 24px;
     flex: 1;
@@ -347,6 +369,11 @@ body.about-page .gallery-item img {
 body.about-page .gallery-item .overlay {
     text-align: center;
     padding: 16px 24px;
+    background-color: black;
+}
+
+body.about-page .gallery-item .overlay a {
+    color: coral;
 }
 
 @media (max-width: 700px) {
@@ -360,27 +387,38 @@ body.about-page .gallery-item .overlay {
     }
 }
 
-/* Gallery with color-overlay swatch on top of each image (services page) */
+/* Gallery with image + description merged into one card (services page) */
+body.services-page {
+    background-color: black;
+    color: white;
+}
+
+body.services-page .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: min(900px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
 body.services-page .gallery-item {
-    position: relative;
-    width: 50%;
+    border-radius: 8px;
+    overflow: hidden;
+    color: white;
+    background-color: rgba(2, 84, 165, 0.5);
 }
 
 body.services-page .gallery-item img {
     width: 100%;
+    height: 220px;
+    object-fit: cover;
     display: block;
-    border-radius: 8px;
 }
 
 body.services-page .gallery-item .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: white; 
-    background-color: rgba(2, 84, 165, 0.5);
-    border-radius: 8px;
+    text-align: center;
+    padding: 16px 24px;
+    background-color: white;
+    color: black;
 }
 @media (max-width: 700px) {
     body.services-page .gallery {
@@ -416,6 +454,7 @@ body.mali-page .gallery-item img {
 body.mali-page .gallery-item .overlay {
     text-align: center;
     padding: 16px 24px;
+    background-color: black;
 }
 
 @media (max-width: 700px) {
@@ -427,4 +466,49 @@ body.mali-page .gallery-item .overlay {
         padding: 6px 8px;
         font-size: 10px;
     }
+}
+
+/* Gallery with image + description merged into one card, 2 per row (Wesołe Maluchy page) */
+body.wesole-maluchy-page .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: min(900px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+body.wesole-maluchy-page h1 {
+    text-align: center;
+}
+
+
+body.wesole-maluchy-page .gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+    color: white;
+    background-color: black;
+}
+
+body.wesole-maluchy-page .gallery-item img {
+    width: 100%;
+    display: block;
+}
+
+body.wesole-maluchy-page .gallery-item .overlay {
+    text-align: center;
+    padding: 16px 24px;
+}
+
+@media (max-width: 700px) {
+    body.wesole-maluchy-page .gallery {
+        gap: 8px;
+    }
+
+    body.wesole-maluchy-page .gallery-item .overlay {
+        padding: 6px 8px;
+        font-size: 10px;
+    }
+}
+
+body.keep-blue-page h1 {
+    text-align: center;
 }

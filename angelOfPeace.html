@@ -7,5 +7,25 @@
 </head>
 <body class="dark-page">
 <h1>Angel Of Peace</h1>
+<div class="slideshow">
+    <figure class="slide active">
+        <img src="assets/images/1-1.jpeg" alt="Slide 1">
+    </figure>
+    <figure class="slide">
+        <img src="assets/images/2-1.jpeg" alt="Slide 2">
+    </figure>
+    <figure class="slide">
+        <img src="assets/images/3-1.jpeg" alt="Slide 3">
+    </figure>
+</div>
+<script>
+    const slides = document.querySelectorAll('.slideshow .slide');
+    let currentSlide = 0;
+    setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }, 3000);
+</script>
 </body>
 </html>
