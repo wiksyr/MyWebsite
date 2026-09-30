@@ -140,6 +140,172 @@ body.dark-page h3 {
     margin-top: 16px;
 }
 
+body.contact-page h1 {
+    text-align: center;
+}
+
+body.dark-page .contact-form {
+    display: grid;
+    gap: 10px;
+    width: min(600px, calc(100% - 32px));
+    margin: 24px auto;
+}
+
+body.dark-page .contact-form label {
+    font-weight: 600;
+}
+
+body.dark-page .contact-form input,
+body.dark-page .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid coral;
+    border-radius: 4px;
+    background: black;
+    color: white;
+    font: inherit;
+}
+
+body.dark-page .contact-form textarea {
+    resize: vertical;
+}
+
+body.dark-page .contact-form button {
+    justify-self: start;
+    margin-top: 8px;
+    padding: 12px 22px;
+    border: 0;
+    border-radius: 4px;
+    background: coral;
+    color: white;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+body.contact-page .contact-divider {
+    width: min(600px, calc(100% - 32px));
+    margin: 28px auto 20px;
+    border: 0;
+    border-top: 1px solid #777;
+}
+
+body.contact-page .social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 0 auto 32px;
+}
+
+body.contact-page .social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+body.contact-page .social-link svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+body.contact-page .social-link.instagram svg rect,
+body.contact-page .social-link.instagram svg circle:not(.instagram-dot) {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+}
+
+body.contact-page .social-link.facebook {
+    background-color: #1877f2;
+}
+
+body.contact-page .social-link.instagram {
+    background-color: #c13584;
+}
+
+body.contact-page .social-link.tiktok {
+    background-color: #111;
+}
+
+body.contact-page .social-link:focus-visible {
+    outline: 2px solid coral;
+    outline-offset: 3px;
+}
+
+body.contact-page .contact-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    width: min(900px, calc(100% - 32px));
+    margin: 24px auto;
+}
+
+body.contact-page .contact-gallery .gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+}
+
+body.contact-page .contact-gallery img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+body.contact-page .contact-gallery .overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 220px;
+    padding: 12px;
+    text-align: center;
+    overflow-y: auto;
+}
+
+body.contact-page .contact-gallery .overlay h3 {
+    margin: 0 0 8px;
+    color: coral;
+    text-align: center;
+}
+
+body.contact-page .contact-gallery .overlay p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    body.contact-page .contact-gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    body.contact-page .contact-gallery img {
+        height: 67px;
+        object-fit: contain;
+        background-color: black;
+    }
+
+    body.contact-page .contact-gallery .overlay {
+        height: 100px;
+        padding: 4px;
+        font-size: 10px;
+    }
+
+    body.contact-page .contact-gallery .overlay h3 {
+        margin-bottom: 4px;
+        font-size: 10px;
+    }
+}
+
 /* Home page */
 body.home-page {
     margin: 0;
@@ -169,6 +335,12 @@ body.wesole-maluchy-page {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 8px 10px;
     border-radius: 8px;
+}
+
+.thunder-emoji {
+    margin: 8px 0;
+    font-size: 40px;
+    line-height: 1;
 }
 
 .logo-icon {
@@ -246,6 +418,126 @@ body.keep-blue-page .keep-blue-video video {
     width: min(100%, 480px);
     max-height: 80vh;
     object-fit: contain;
+}
+
+body.angel-video-page h1 {
+    text-align: center;
+    color: coral;
+}
+
+body.angel-video-page h2, body.angel-video-page h3 {
+    text-align: center;
+    color: black;
+}
+
+body.angel-video-page .angel-video {
+    justify-content: center;
+    background-color: black;
+    border-radius: 8px;
+}
+
+body.angel-video-page .angel-video video {
+    display: block;
+    width: min(100%, 720px);
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+body.angel-video-page > .divider {
+    width: min(720px, calc(100% - 32px));
+    margin: 24px auto;
+    border: 0;
+    border-top: 1px solid #777;
+}
+
+body.angel-video-page .angel-description {
+    width: min(720px, calc(100% - 32px));
+    margin: 24px auto;
+    padding: 24px;
+    border-radius: 8px;
+    background-color: black;
+    color: coral;
+    text-align: center;
+}
+
+body.angel-video-page .angel-description p {
+    margin: 0;
+}
+
+body.angel-video-page .angel-description-logo {
+    display: block;
+    width: min(160px, 100%);
+    height: auto;
+    margin: 0 auto 16px;
+}
+
+body.keep-blue-page > .divider {
+    width: min(900px, calc(100% - 32px));
+    margin: 24px auto;
+    border: 0;
+    border-top: 1px solid #777;
+}
+
+body.keep-blue-page .keep-blue-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    width: min(700px, calc(100% - 32px));
+    margin: 24px auto;
+}
+
+body.keep-blue-page .keep-blue-gallery .gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: black;
+}
+
+body.keep-blue-page .keep-blue-gallery img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+}
+
+body.terminator-page .terminator-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    width: min(2100px, calc(100% - 32px));
+    margin: 24px auto;
+}
+
+body.terminator-page .terminator-gallery .gallery-item {
+    overflow: hidden;
+    border-radius: 16px;
+    background-color: black;
+}
+
+body.terminator-page .terminator-gallery img {
+    display: block;
+    width: 100%;
+    height: 960px;
+    object-fit: cover;
+}
+
+body.terminator-page h1 {
+    text-align: center;
+    color: coral;
+}
+
+@media (max-width: 700px) {
+    body.keep-blue-page .keep-blue-gallery {
+        gap: 8px;
+    }
+
+    body.terminator-page .terminator-gallery {
+        width: min(700px, calc(100% - 32px));
+        gap: 8px;
+    }
+
+    body.terminator-page .terminator-gallery img {
+        height: 320px;
+    }
 }
 
 .video-wrapper {
@@ -331,6 +623,83 @@ body.keep-blue-page .keep-blue-video video {
 
 .slideshow .slide figcaption a {
     color: coral;
+}
+
+body.angel-video-page .angel-slideshow {
+    position: relative;
+    width: min(900px, calc(100% - 32px));
+    margin: 24px auto 0;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: black;
+}
+
+body.angel-video-page .angel-slide-frame {
+    position: relative;
+}
+
+body.angel-video-page .angel-slide-frame .slideshow {
+    width: 100%;
+    margin: 0;
+}
+
+body.angel-video-page .slide-control {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translateY(-50%);
+    border: 1px solid white;
+    border-radius: 50%;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+body.angel-video-page .slide-control.previous {
+    left: 12px;
+}
+
+body.angel-video-page .slide-control.next {
+    right: 12px;
+}
+
+body.angel-video-page .angel-slide-list {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 12px auto 0;
+    padding: 0;
+    list-style: none;
+}
+
+body.angel-video-page .angel-slide-list button {
+    display: block;
+    width: 76px;
+    height: 52px;
+    padding: 2px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    background: black;
+    cursor: pointer;
+}
+
+body.angel-video-page .angel-slide-list button img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body.angel-video-page .angel-slide-list button.active {
+    border-color: coral;
+}
+
+body.angel-video-page .slide-control:focus-visible,
+body.angel-video-page .angel-slide-list button:focus-visible {
+    outline: 2px solid coral;
+    outline-offset: 2px;
 }
 
 body.services-page .slideshow {
