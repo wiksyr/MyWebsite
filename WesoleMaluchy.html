@@ -33,5 +33,30 @@
         </div>
     </div>
 </div>
+
+<div id="wesole-maluchy-lightbox" class="image-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image" hidden>
+    <img id="wesole-maluchy-lightbox-image" src="" alt="">
+</div>
+
+<script>
+    const wesoleMaluchyLightbox = document.getElementById('wesole-maluchy-lightbox');
+    const wesoleMaluchyLightboxImage = document.getElementById('wesole-maluchy-lightbox-image');
+    const wesoleMaluchyGalleryImages = document.querySelectorAll('.wesole-maluchy-page .gallery-item img');
+
+    wesoleMaluchyGalleryImages.forEach(function (image) {
+        image.addEventListener('click', function () {
+            wesoleMaluchyLightboxImage.src = image.src;
+            wesoleMaluchyLightboxImage.alt = image.alt;
+            wesoleMaluchyLightbox.hidden = false;
+        });
+    });
+
+    wesoleMaluchyLightbox.addEventListener('click', function (event) {
+        if (event.target === wesoleMaluchyLightbox) {
+            wesoleMaluchyLightbox.hidden = true;
+            wesoleMaluchyLightboxImage.src = '';
+        }
+    });
+</script>
 </body>
 </html>

@@ -31,5 +31,30 @@
 		<img src="assets/images/3.jpeg" alt="Mój Grom">
 	</div>
 </div>
+
+<div id="in-space-lightbox" class="image-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image" hidden>
+	<img id="in-space-lightbox-image" src="" alt="">
+</div>
+
+<script>
+	const inSpaceLightbox = document.getElementById('in-space-lightbox');
+	const inSpaceLightboxImage = document.getElementById('in-space-lightbox-image');
+	const inSpaceGalleryImages = document.querySelectorAll('.keep-blue-gallery img');
+
+	inSpaceGalleryImages.forEach(function (image) {
+		image.addEventListener('click', function () {
+			inSpaceLightboxImage.src = image.src;
+			inSpaceLightboxImage.alt = image.alt;
+			inSpaceLightbox.hidden = false;
+		});
+	});
+
+	inSpaceLightbox.addEventListener('click', function (event) {
+		if (event.target === inSpaceLightbox) {
+			inSpaceLightbox.hidden = true;
+			inSpaceLightboxImage.src = '';
+		}
+	});
+</script>
 </body>
 </html>

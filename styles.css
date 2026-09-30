@@ -691,6 +691,7 @@ body.keep-blue-page .keep-blue-gallery img {
     width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: contain;
+    cursor: zoom-in;
 }
 
 body.terminator-page .terminator-gallery {
@@ -927,6 +928,7 @@ body.about-page .gallery-item {
 body.about-page .gallery-item img {
     width: 100%;
     display: block;
+    cursor: zoom-in;
 }
 
 body.about-page .gallery-item .overlay {
@@ -975,6 +977,7 @@ body.services-page .gallery-item img {
     height: 220px;
     object-fit: cover;
     display: block;
+    cursor: zoom-in;
 }
 
 body.services-page .gallery-item .overlay {
@@ -1012,12 +1015,38 @@ body.mali-page .gallery-item {
 body.mali-page .gallery-item img {
     width: 100%;
     display: block;
+    cursor: zoom-in;
 }
 
 body.mali-page .gallery-item .overlay {
     text-align: center;
     padding: 16px 24px;
     background-color: black;
+}
+
+.image-lightbox {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background-color: rgba(0, 0, 0, 0.85);
+    cursor: zoom-out;
+    z-index: 100;
+}
+
+.image-lightbox[hidden] {
+    display: none;
+}
+
+.image-lightbox img {
+    width: auto;
+    height: auto;
+    max-width: 95vw;
+    max-height: 95vh;
+    object-fit: contain;
+    cursor: default;
 }
 
 @media (max-width: 700px) {
@@ -1054,6 +1083,7 @@ body.wesole-maluchy-page .gallery-item {
 body.wesole-maluchy-page .gallery-item img {
     width: 100%;
     display: block;
+    cursor: zoom-in;
 }
 
 body.wesole-maluchy-page .gallery-item .overlay {

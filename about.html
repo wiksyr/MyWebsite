@@ -56,5 +56,30 @@
             </div>
         </div>
     </div>
+
+    <div id="about-lightbox" class="image-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image" hidden>
+        <img id="about-lightbox-image" src="" alt="">
+    </div>
+
+    <script>
+        const aboutLightbox = document.getElementById('about-lightbox');
+        const aboutLightboxImage = document.getElementById('about-lightbox-image');
+        const aboutGalleryImages = document.querySelectorAll('.about-page .gallery-item img');
+
+        aboutGalleryImages.forEach(function (image) {
+            image.addEventListener('click', function () {
+                aboutLightboxImage.src = image.src;
+                aboutLightboxImage.alt = image.alt;
+                aboutLightbox.hidden = false;
+            });
+        });
+
+        aboutLightbox.addEventListener('click', function (event) {
+            if (event.target === aboutLightbox) {
+                aboutLightbox.hidden = true;
+                aboutLightboxImage.src = '';
+            }
+        });
+    </script>
 </body>
 </html>

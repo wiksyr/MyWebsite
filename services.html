@@ -47,5 +47,30 @@
         </div>
     </div>
 </div>
+
+<div id="services-lightbox" class="image-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image" hidden>
+    <img id="services-lightbox-image" src="" alt="">
+</div>
+
+<script>
+    const servicesLightbox = document.getElementById('services-lightbox');
+    const servicesLightboxImage = document.getElementById('services-lightbox-image');
+    const servicesGalleryImages = document.querySelectorAll('.services-page .gallery-item img');
+
+    servicesGalleryImages.forEach(function (image) {
+        image.addEventListener('click', function () {
+            servicesLightboxImage.src = image.src;
+            servicesLightboxImage.alt = image.alt;
+            servicesLightbox.hidden = false;
+        });
+    });
+
+    servicesLightbox.addEventListener('click', function (event) {
+        if (event.target === servicesLightbox) {
+            servicesLightbox.hidden = true;
+            servicesLightboxImage.src = '';
+        }
+    });
+</script>
 </body>
 </html>
