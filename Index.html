@@ -7,116 +7,367 @@
 <link rel="icon" type="image/png" href="assets/logo/logo.png">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body class="shell-page">
-
+<body class="shell-page dark-page">
+<div id="page-loader" role="status" aria-live="polite" aria-label="Ładowanie strony">
+    <span class="page-loader-spinner" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M13.2 1.5 4.8 13h5.8l-.7 9.5L19.2 10h-6l0-8.5z"/></svg></span>
+    <span>Ładowanie strony...</span>
+</div>
 <header id="header">
-    <button id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-    <a id="support-button" href="https://buycoffee.to/blekitnygrom007" target="_blank" rel="noopener noreferrer">Wspieram</a>
+    <a id="support-button" href="https://buycoffee.to/blekitnygrom007" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M2 21h18v-2H2v2zM20 8h-2V5H4v9c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-1h2c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 4h-2v-2h2v2z"/></svg>Wspieram</a>
     <img id="logo" src="assets/logo/logo.png" alt="Logo">
 </header>
-
-<nav id="menu">
-    <a data-page="home.html" class="active">Strona główna</a>
-    <a data-page="about.html">Witaj</a>
-    <a data-page="services.html">Podążaj za moją pasją</a>
-    <a data-page="MaliPrzyjaciele.html">Mali Przyjaciele</a>
-    <a data-page="WesoleMaluchy.html">Wesołe Maluchy</a>
-    <a data-page="KeepBlue.html">Keep Blue</a>
-    <a data-page="terminator.html">Terminator</a>
-    <a data-page="angelOfPeace.html">Angel Of Peace</a>
-    <a data-page="InSpace.html">In Space</a>
-    <a data-page="contact.html">Kontakt</a>
+<div id="navigation-row">
+    <div id="breadcrumb" aria-live="polite">Strona główna</div>
+    <button id="color-invert-toggle" type="button" aria-label="Invert colors" aria-pressed="false" title="Invert colors"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18V3z" fill="currentColor"/><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+    <button id="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+    </button>
+</div>
+<nav id="menu" aria-label="Nawigacja główna" aria-hidden="true" inert>
+    <a href="#home" class="active">Strona główna</a>
+    <a href="#about">Witaj</a>
+    <a href="#services">Podążaj za moją pasją</a>
+    <a href="#mali-przyjaciele">Mali Przyjaciele</a>
+    <a href="#wesole-maluchy">Wesołe Maluchy</a>
+    <a href="#keep-blue">Keep Blue</a>
+    <a href="#terminator">Terminator</a>
+    <a href="#angel-of-peace">Angel Of Peace</a>
+    <a href="#in-space">In Space</a>
+    <a href="#contact">Kontakt</a>
 </nav>
-
 <aside id="left-pane" aria-label="Additional content">
     <div class="left-pane-social-links" role="group" aria-label="Media społecznościowe">
-        <a class="left-pane-social-link facebook" href="https://www.facebook.com/CustomEdenGarage" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8.2h2.8l.4-3.2h-3.2v-2c0-.9.3-1.5 1.6-1.5h1.7V3.2c-.3 0-1.3-.2-2.5-.2-2.5 0-4.2 1.5-4.2 4.3v2.3H7.3v3.2h2.8V21h3.4z"/></svg>
-            Facebook
-        </a>
-        <a class="left-pane-social-link instagram" href="https://www.instagram.com/explore/tags/b%C5%82%C4%99kitnygrombyagent007/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="instagram-dot" cx="17.7" cy="6.7" r="1"/></svg>
-            Instagram
-        </a>
-        <a class="left-pane-social-link tiktok" href="https://www.tiktok.com/search?q=blekitny%20grom%20007&t=1712228620671" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 3c.3 2.1 1.5 3.5 3.5 3.7v3.1a8.3 8.3 0 0 1-3.5-1v6.4a5.5 5.5 0 1 1-5.5-5.5c.4 0 .8 0 1.2.1V13a2.4 2.4 0 1 0 1.2 2.1V3h3.1z"/></svg>
-            TikTok
-        </a>
+        <a class="left-pane-social-link facebook" href="https://www.facebook.com/CustomEdenGarage" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8.2h2.8l.4-3.2h-3.2v-2c0-.9.3-1.5 1.6-1.5h1.7V3.2c-.3 0-1.3-.2-2.5-.2-2.5 0-4.2 1.5-4.2 4.3v2.3H7.3v3.2h2.8V21h3.4z"/></svg>Facebook</a>
+        <a class="left-pane-social-link instagram" href="https://www.instagram.com/explore/tags/b%C5%82%C4%99kitnygrombyagent007/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="instagram-dot" cx="17.7" cy="6.7" r="1"/></svg>Instagram</a>
+        <a class="left-pane-social-link tiktok" href="https://www.tiktok.com/search?q=blekitny%20grom%20007&t=1712228620671" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 3c.3 2.1 1.5 3.5 3.5 3.7v3.1a8.3 8.3 0 0 1-3.5-1v6.4a5.5 5.5 0 1 1-5.5-5.5c.4 0 .8 0 1.2.1V13a2.4 2.4 0 1 0 1.2 2.1V3h3.1z"/></svg>TikTok</a>
     </div>
-    <div class="left-pane-gallery-item">
-        <img src="assets/images/moj-grom.jpeg" alt="Dwa charaktery">
-        <div class="left-pane-overlay">
-            <h2>O MOIM AUCIE ... MOIM GROMIE :) <br/> 
-                    * z lekkim tuning ;) </h2>
-            <p>To Auto zdecydowanie zasługuje na coś więcej niż tylko przelotne spojrzenie, to zachęta by poznać je bliżej i choć czytając nieco prostych informacji poczuć się jakby miało się z nim bezpośrednią styczność. </p>
-            <br/>
-            <p>Prawdziwa styczność z pięknem zawsze przynosi piękno, więc aby może i Twoje auto znalazło w sobie wydźwięk niepowtarzalny, zapraszam do zapoznania się z moim ;) ... jest MOC !+</p>
-        </div>
-    </div>
+    <div class="left-pane-gallery-item"><img src="assets/images/moj-grom.jpeg" alt="Dwa charaktery"><div class="left-pane-overlay"><h2>O MOIM AUCIE ... MOIM GROMIE :)<br>* z lekkim tuning ;)</h2><p>To Auto zdecydowanie zasługuje na coś więcej niż tylko przelotne spojrzenie, to zachęta by poznać je bliżej i choć czytając nieco prostych informacji poczuć się jakby miało się z nim bezpośrednią styczność.</p><br><p>Prawdziwa styczność z pięknem zawsze przynosi piękno, więc aby może i Twoje auto znalazło w sobie wydźwięk niepowtarzalny, zapraszam do zapoznania się z moim ;) ... jest MOC !+</p></div></div>
     <h2 class="left-pane-contact-title">Napisz do mnie:</h2>
-    <form class="left-pane-contact-form" action="https://formsubmit.co/syrek.wiktor@gmail.com" method="POST">
+    <form class="left-pane-contact-form" action="mailto:syrek.wiktor@gmail.com" method="POST" enctype="text/plain">
         <input type="hidden" name="_subject" value="Wiadomość ze strony Błękitny Grom">
-        <label for="left-pane-name">Imię</label>
-        <input id="left-pane-name" name="Imię" type="text" autocomplete="name" required>
-
-        <label for="left-pane-email">E-mail</label>
-        <input id="left-pane-email" name="E-mail" type="email" autocomplete="email" required>
-
-        <label for="left-pane-message">Wiadomość</label>
-        <textarea id="left-pane-message" name="Wiadomość" rows="5" required></textarea>
-
+        <label for="left-pane-name">Imię</label><input id="left-pane-name" name="Imię" type="text" autocomplete="name" required>
+        <label for="left-pane-email">E-mail</label><input id="left-pane-email" name="E-mail" type="email" autocomplete="email" required>
+        <label for="left-pane-message">Wiadomość</label><textarea id="left-pane-message" name="Wiadomość" rows="5" required></textarea>
         <button type="submit">Wyślij</button>
     </form>
 </aside>
+<aside id="quote-pane" aria-label="Cytat" aria-hidden="true" inert>
+    <blockquote>
+        <p>Weak people <strong>revenge</strong>; Strong <strong>forgive</strong>; Intelligent one <strong>ignore</strong> [eng.]</p>
+        <p lang="pl">Ludzie słabi <strong>szukają zemsty</strong>; Ludzie silni <strong>wybaczają</strong>; Ludzie inteligentni <strong>ignorują</strong> [pl.].</p>
+        <cite><strong>[Albert Einstein]</strong></cite>
+    </blockquote>
+    <hr class="quote-divider">
+    <blockquote>Człowiek rodzi się <strong>Zielony</strong> i dorasta do <strong>Błękitu</strong>.<cite><strong>[Adam Mischke]</strong></cite></blockquote>
+</aside>
 <button id="left-pane-toggle" type="button" aria-label="Show additional content" aria-expanded="false">&gt;&gt;</button>
+<button id="quote-pane-toggle" type="button" aria-label="Pokaż cytat" aria-expanded="false" aria-controls="quote-pane" title="Pokaż cytat"><span aria-hidden="true">“</span></button>
+<main id="content">
+    <section id="home" class="page home-page" aria-labelledby="home-title">
+        <div class="container home-intro-container">
+            <div class="home-intro-content"><h1 id="home-title">Zdobądź dla siebie GROM!</h1><div class="thunder-emoji" aria-hidden="true">⚡</div><h2>Człowiek rodzi się ZIELONY <br> i dorasta do BŁĘKITU.</h2><h3 class="hashes">#BłękitnyGrom007 <br> #BlueThunder007</h3></div>
+            <div class="home-photo-container"><img src="assets/images/garaz_adam2.jpeg" alt="Garaż i Błękitny Grom"></div>
+        </div>
+        <div class="hashes-container">#SpaceShip <br>#Ship <br>#Sheep <br>#OfWCA <br>#WprostocieZłożonośćPiękna <br>#RelationShip <br>#FreeDom <br>#HomeOfPeace <br>#WorldPeaceSpace <br>#WszystkoToAlgorytm <br>#DoskonałyEliminatorAlgorytmiczny <br>#wDrodze <br>#ŻycieToNieAlgorytm <br>#ŻycieNajważniejsze <br>#OnePassionOneLove <br>#EspressoPower <br></div>
+        <a class="coffee-button" href="https://buycoffee.to/blekitnygrom007" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="20" height="20" fill="#fff" aria-hidden="true"><path d="M2 21h18v-2H2v2zM20 8h-2V5H4v9c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-1h2c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 4h-2v-2h2v2z"/></svg>Wspieram Cię Gromie! Stawiam Kawę!</a>
+    </section>
 
-<div id="breadcrumb">Strona główna</div>
+    <section id="about" class="page dark-page about-page" aria-labelledby="about-title">
+        <div class="video-container"><div class="video-wrapper"><video src="assets/video/intro.mp4" autoplay muted loop playsinline controls></video></div><div class="video-comment"><h2 id="about-title">Witaj na mojej stronie:</h2><p>Pozwól mi z pełną serdecznością powitać Ciebie na mojej stronie. Znajdziesz tu wiele interesujących informacji i inspirujących treści, które mam nadzieję nieco rozjaśnią twoje spojrzenie na świat. Zapraszam również do śledzenia mojego profilu w mediach społecznościowych, a jeśli spodobają Ci się moje pomysły, zawsze możesz brać w nich czynny udział przez udzielane wsparcie/ postawienie kawy...</p><a class="about-coffee-button" href="https://buycoffee.to/blekitnygrom007" target="_blank" rel="noopener noreferrer" aria-label="Wspieram, postaw kawę" title="Wspieram"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M2 21h18v-2H2v2zM20 8h-2V5H4v9c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-1h2c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 4h-2v-2h2v2z"/></svg></a></div></div>
+        <hr class="divider"><h2>Troszkę o mnie...</h2><h3>Kim jestem?</h3><div class="container"><p>Jestem pasjonatem życia, który stara się dzielić swoją wiedzą i doświadczeniem z innymi. Moje zainteresowania obejmują różnorodne dziedziny, od technologii po sztukę, a moim celem jest inspirowanie innych do odkrywania własnych pasji i rozwijania swoich umiejętności.</p></div>
+        <div class="gallery">
+            <div class="gallery-item"><img src="assets/images/7cudowswiata2-1.png" alt="Dzień kobiet wyjątkowy dla mężczyzn"><div class="overlay"><p>Zaktualizowane w dniu wyjątkowym dla mężczyzn, w którym ŚMIAŁO MOGĄ WYWYŻSZAĆ PIĘKNO!</p></div></div>
+            <div class="gallery-item"><img src="assets/images/dorosli-smutniejsi-niz-dzieci.jpg" alt="Dorośli smutniejsi niż dzieci"><div class="overlay"><p><a href="http://www.wedka.org" target="_blank" rel="noopener noreferrer">Przejdź do Wędka</a><br>Raz zawitasz, nie zapomnisz nigdy. Zawsze Wędka będzie Twoim Domem.</p></div></div>
+            <div class="gallery-item"><img src="assets/images/cytat2.png" alt="Głębia"><div class="overlay"><p>Głębia...</p></div></div>
+            <div class="gallery-item"><img src="assets/images/18.jpeg" alt="Oceń mnie dopiero wtedy gdy sam będziesz idealny"><div class="overlay"><p>"Oceń mnie dopiero wtedy gdy sam będziesz idealny."</p></div></div>
+            <div class="gallery-item"><img src="assets/images/onePassion.jpg" alt="One Passion One Love"><div class="overlay"><p><a href="https://www.facebook.com/onepassion.onelove.wp" target="_blank" rel="noopener noreferrer">Przejdź do One Passion One Love</a><br>#PiłkaPodwórkowa</p></div></div>
+        </div>
+        <div id="about-lightbox" class="image-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image" hidden><img id="about-lightbox-image" src="" alt=""></div>
+    </section>
 
-<iframe id="content" name="content" src="home.html" title="Page content"></iframe>
+    <section id="services" class="page dark-page services-page" aria-labelledby="services-title">
+        <hr class="divider">
+        <h2 id="services-title">Podążaj za moją pasją</h2><h3>... i buduj swoje pozytywne doświadczenia!</h3>
+        <div class="gallery">
+            <div class="gallery-item"><img src="assets/images/11.jpeg" alt="Zdjęcie 1"><div class="overlay"><p>Bóg Cię kocha!</p></div></div>
+            <div class="gallery-item"><img src="assets/images/8.jpeg" alt="Zdjęcie 2"><div class="overlay"><p>Focus on your peace!</p></div></div>
+            <div class="gallery-item"><img src="assets/images/12.jpeg" alt="Zdjęcie 3"><div class="overlay"><p>Enjoy the moment!</p></div></div>
+            <div class="gallery-item"><img src="assets/images/4.jpeg" alt="Zdjęcie 4"><div class="overlay"><p>#EspressoPower</p></div></div>
+            <div class="gallery-item"><img src="assets/images/2.jpeg" alt="Zdjęcie 5"><div class="overlay"><p>I kropka.</p></div></div>
+            <div class="gallery-item"><img src="assets/images/5.jpeg" alt="Zdjęcie 6"><div class="overlay"><p>Keep Blue</p></div></div>
+        </div>
+        <div id="services-lightbox" class="image-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image" hidden><img id="services-lightbox-image" src="" alt=""></div>
+    </section>
+
+    <section id="mali-przyjaciele" class="page dark-page mali-page" aria-labelledby="mali-title">
+        <hr class="divider">
+        <h2 id="mali-title">Mali Przyjaciele</h2><h3>Zdjęcia z małych spotkań</h3>
+        <div class="gallery">
+            <div class="gallery-item"><img src="assets/images/dwa_charaktery.jpeg" alt="dwa charaktery"><div class="overlay"><h3>DWA CHARAKTERY</h3><p>Z natury każdy maluch odzwierciedla nieco swoim wyglądem charakter właściciela, co dwa charaktery, to dwa różne maluchy.</p></div></div>
+            <div class="gallery-item"><img src="assets/images/maluch_wysciogowy.jpg" alt="maluch wysciogowy"><div class="overlay"><h3>Maluch-Luxus-Pewexu</h3><p>Maluch, który uwielbia prędkość i rywalizację, zawsze gotowy do wyścigów.</p></div></div>
+            <div class="gallery-item"><img src="assets/images/nasza_blyskawica.png" alt="nasza blyskawica"><div class="overlay"><h3>NASZA BŁYSKAWICA</h3><p>Nasza błyskawica, szybka i energiczna, zawsze w ruchu.</p></div></div>
+            <div class="gallery-item"><img src="assets/images/maluch_tragarz.jpg" alt="maluch tragarz"><div class="overlay"><h3>MALUCH TRAGARZ</h3><p>Maluch tragarz, silny i wytrwały, zawsze gotowy do pracy.</p></div></div>
+            <div class="gallery-item"><img src="assets/images/klasyczne_bordo.jpg" alt="klasyczne bordo"><div class="overlay"><h3>KLASYCZNE BORDO</h3><p>Klasyczne bordo, elegancki i stylowy, przyciągający wzrok.</p></div></div>
+            <div class="gallery-item"><img src="assets/images/model_bialy.jpg" alt="model bialy"><div class="overlay"><h3>MODEL BIAŁY 138</h3><p>Model biały 138, wyjątkowy i unikalny, wyróżniający się w tłumie.</p></div></div>
+        </div>
+        <div id="mali-lightbox" class="image-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image" hidden><img id="mali-lightbox-image" src="" alt=""></div>
+    </section>
+
+    <section id="wesole-maluchy" class="page dark-page wesole-maluchy-page" aria-labelledby="wesole-title">
+        <hr class="divider">
+        <h1 id="wesole-title">Wesołe Maluchy</h1>
+        <div class="gallery">
+            <div class="gallery-item"><img src="assets/images/bylo_nas_tylko_kilkoro.jpg" alt="bylo nas tylko kilkoro"><div class="overlay"><p>Było nas tylko kilkoro...</p></div></div>
+            <div class="gallery-item"><img src="assets/images/choć_mali_to_sprawie_oddani.jpg" alt="chociaz mali to sprawie oddani"><div class="overlay"><p>Choć mali, to sprawie oddani.</p></div></div>
+            <div class="gallery-item"><img src="assets/images/gdzie_kucharek_szesc.jpg" alt="gdzie kucharek szesc"><div class="overlay"><p>Gdzie kucharek sześć...</p></div></div>
+            <div class="gallery-item"><img src="assets/images/nie_braklo_groma.jpg" alt="nie brakło groma"><div class="overlay"><p>Nie zabrakło i Groma!</p></div></div>
+        </div>
+        <div id="wesole-lightbox" class="image-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image" hidden><img id="wesole-lightbox-image" src="" alt=""></div>
+    </section>
+
+    <section id="keep-blue" class="page dark-page keep-blue-page" aria-labelledby="keep-blue-title">
+        <hr class="divider">
+        <h1 id="keep-blue-title">Trzymaj się błękitu</h1>
+        <div class="gallery keep-blue-gallery">
+            <div class="gallery-item"><img src="assets/images/1-2.jpeg" alt="Space and peace"></div><div class="gallery-item"><img src="assets/images/2-2.jpeg" alt="Home of peace"></div><div class="gallery-item"><img src="assets/images/3-2.jpeg" alt="Motto number 2"></div><div class="gallery-item"><img src="assets/images/4-1.jpeg" alt="Motto number 6"></div><div class="gallery-item"><img src="assets/images/motto-nr-2.jpeg" alt="Fiat in space"></div><div class="gallery-item"><img src="assets/images/motto-nr-6.jpeg" alt="Mój Grom"></div>
+        </div>
+        <div id="keep-blue-lightbox" class="image-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image" hidden><img id="keep-blue-lightbox-image" src="" alt=""></div>
+    </section>
+
+    <section id="terminator" class="page dark-page terminator-page" aria-labelledby="terminator-title">
+        <hr class="divider">
+        <h1 id="terminator-title">#Terminator</h1><h3>Ja jestem twórcą teorii <br/> Doskonałego Eliminatora Algorytmicznego.</h3>
+        <div class="gallery terminator-gallery"><div class="gallery-item"><img src="assets/images/terminator1.jpeg" alt="Terminator 1"></div><div class="gallery-item"><img src="assets/images/terminator2.jpeg" alt="Terminator 2"></div></div>
+    </section>
+
+    <section id="angel-of-peace" class="page dark-page angel-video-page" aria-labelledby="angel-title">
+        <hr class="divider">
+        <h1 id="angel-title">#AngelOfPeace</h1>
+        <div class="angel-slideshow"><div class="angel-slide-frame"><button class="slide-control previous" type="button" aria-label="Previous slide">&#8592;</button><div class="slideshow"><figure class="slide active"><img src="assets/images/1-1.jpeg" alt="Slide 1"></figure><figure class="slide"><img src="assets/images/2-1.jpeg" alt="Slide 2"></figure><figure class="slide"><img src="assets/images/3-1.jpeg" alt="Slide 3"></figure></div><button class="slide-control next" type="button" aria-label="Next slide">&#8594;</button></div>
+            <ol class="angel-slide-list" aria-label="Choose a slide"><li><button type="button" class="active" aria-current="true" aria-label="Show slide 1"><img src="assets/images/1-1.jpeg" alt=""></button></li><li><button type="button" aria-label="Show slide 2"><img src="assets/images/2-1.jpeg" alt=""></button></li><li><button type="button" aria-label="Show slide 3"><img src="assets/images/3-1.jpeg" alt=""></button></li></ol>
+        </div>
+        <hr class="divider"><div class="angel-description"><img class="angel-description-logo" src="assets/logo/logo.png" alt="Błękitny Grom"><p>#wDrodze</p><p>#Drogowskaz</p><p>#AngelOfPeace</p><p>#TopGunF25</p><p>#OldSchool25</p><p>#NeverGiveUP</p><p>#FreeDom</p><p>#HomeOfPeace</p><p>#WorldPeaceSpace</p><p>#StarGate</p><p>#WprostocieZłożonośćPiękna</p><p>#ŻycieNajważniejsze</p><p>Człowiek rodzi się Zielony i dorasta do Błękitu.</p><p>#PośpiechZabija</p><p>#OnePassionOneLove</p></div>
+    </section>
+
+    <section id="in-space" class="page dark-page keep-blue-page" aria-labelledby="in-space-title">
+        <hr class="divider">
+        <h1 id="in-space-title">In Space</h1>
+        <div class="gallery keep-blue-gallery"><div class="gallery-item"><img src="assets/images/space-peace.jpeg" alt="Space and peace"></div><div class="gallery-item"><img src="assets/images/home-of-peace.jpeg" alt="Home of peace"></div><div class="gallery-item"><img src="assets/images/motto-nr-2.jpeg" alt="Motto number 2"></div><div class="gallery-item"><img src="assets/images/motto-nr-6.jpeg" alt="Motto number 6"></div><div class="gallery-item"><img src="assets/images/fiat-in-space.jpeg" alt="Fiat in space"></div><div class="gallery-item"><img src="assets/images/3.jpeg" alt="Mój Grom"></div></div>
+        <div id="in-space-lightbox" class="image-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image" hidden><img id="in-space-lightbox-image" src="" alt=""></div>
+    </section>
+
+    <section id="contact" class="page dark-page contact-page" aria-labelledby="contact-title">
+        <hr class="divider">
+        <h1 id="contact-title">Kontakt</h1>
+        <form class="contact-form" action="mailto:syrek.wiktor@gmail.com" method="POST" enctype="text/plain"><input type="hidden" name="_subject" value="Wiadomość ze strony Błękitny Grom"><label for="name">Imię</label><input id="name" name="Imię" type="text" autocomplete="name" required><label for="email">E-mail</label><input id="email" name="E-mail" type="email" autocomplete="email" required><label for="message">Wiadomość</label><textarea id="message" name="Wiadomość" rows="7" required></textarea><button type="submit">Wyślij</button></form>
+        <hr class="contact-divider"><div class="social-links" role="group" aria-label="Media społecznościowe"><a class="social-link facebook" href="https://www.facebook.com/CustomEdenGarage" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8.2h2.8l.4-3.2h-3.2v-2c0-.9.3-1.5 1.6-1.5h1.7V3.2c-.3 0-1.3-.2-2.5-.2-2.5 0-4.2 1.5-4.2 4.3v2.3H7.3v3.2h2.8V21h3.4z"/></svg>Facebook</a><a class="social-link instagram" href="https://www.instagram.com/explore/tags/b%C5%82%C4%99kitnygrombyagent007/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="instagram-dot" cx="17.7" cy="6.7" r="1"/></svg>Instagram</a><a class="social-link tiktok" href="https://www.tiktok.com/search?q=blekitny%20grom%20007&t=1712228620671" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 3c.3 2.1 1.5 3.5 3.5 3.7v3.1a8.3 8.3 0 0 1-3.5-1v6.4a5.5 5.5 0 1 1-5.5-5.5c.4 0 .8 0 1.2.1V13a2.4 2.4 0 1 0 1.2 2.1V3h3.1z"/></svg>TikTok</a></div><hr class="contact-divider">
+        <div class="gallery contact-gallery"><div class="gallery-item"><img src="assets/images/adamFace.png" alt="To ja"><div class="overlay"><h3>Adam MISCHKE</h3><p>Główny hadnlowiec a poza tym Projektant...główny technolog... badacz potrzeb...słuchacz... Never Give UP!</p></div></div><div class="gallery-item"><img src="assets/images/16.jpeg" alt="One Passion One Love"><div class="overlay"><h3>Adam MISCHKE</h3><p>Mechanik ... wizjoner i twórca innowacyjnych rozwiązań</p></div></div><div class="gallery-item"><img src="assets/images/space-peace.jpeg" alt="Astronauta z przesłaniem pokoju"><div class="overlay"><h3>Adam MISCHKE</h3><p>Księgowy: kocham liczby, ale nie lubię liczyć...</p></div></div></div>
+    </section>
+</main>
+<footer class="site-footer">
+    <span>Błękitny-Grom007</span>
+    <img class="site-footer-image" src="assets/images/klucze.png" alt="Klucze">
+    <a href="#home">Powrót na górę</a>
+</footer>
 
 <script>
     const menu = document.getElementById('menu');
-    const frame = document.getElementById('content');
     const hamburger = document.getElementById('hamburger');
+    const colorInvertToggle = document.getElementById('color-invert-toggle');
     const breadcrumb = document.getElementById('breadcrumb');
     const leftPane = document.getElementById('left-pane');
     const leftPaneToggle = document.getElementById('left-pane-toggle');
+    const quotePane = document.getElementById('quote-pane');
+    const quotePaneToggle = document.getElementById('quote-pane-toggle');
+    const sections = Array.from(document.querySelectorAll('#content > .page'));
+
+    function setColorsInverted(isInverted) {
+        document.documentElement.classList.toggle('color-inverted', isInverted);
+        colorInvertToggle.setAttribute('aria-pressed', String(isInverted));
+        colorInvertToggle.setAttribute('aria-label', isInverted ? 'Restore original colors' : 'Invert colors');
+        colorInvertToggle.title = isInverted ? 'Restore original colors' : 'Invert colors';
+        try {
+            localStorage.setItem('blekitny-grom-colors-inverted', String(isInverted));
+        } catch (error) {}
+    }
+
+    let colorsInverted = false;
+    try {
+        colorsInverted = localStorage.getItem('blekitny-grom-colors-inverted') === 'true';
+    } catch (error) {}
+    setColorsInverted(colorsInverted);
+    colorInvertToggle.addEventListener('click', function () {
+        setColorsInverted(!document.documentElement.classList.contains('color-inverted'));
+    });
+
+    function openEmailDraft(form, event) {
+        event.preventDefault();
+        const formData = new FormData(form);
+        const subject = String(formData.get('_subject') || 'Wiadomość ze strony');
+        const body = [
+            'Imię: ' + formData.get('Imię'),
+            'E-mail: ' + formData.get('E-mail'),
+            '',
+            'Wiadomość:',
+            String(formData.get('Wiadomość'))
+        ].join('\r\n');
+        const mailtoUrl = 'mailto:syrek.wiktor@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        window.location.href = mailtoUrl;
+    }
+
+    document.querySelectorAll('#contact .contact-form, #left-pane .left-pane-contact-form').forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            openEmailDraft(form, event);
+        });
+    });
+
+    function setMenuOpen(isOpen) {
+        menu.classList.toggle('open', isOpen);
+        hamburger.classList.toggle('open', isOpen);
+        hamburger.setAttribute('aria-expanded', String(isOpen));
+        hamburger.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+        menu.setAttribute('aria-hidden', String(!isOpen));
+        menu.toggleAttribute('inert', !isOpen);
+    }
 
     hamburger.addEventListener('click', function () {
-        const isOpen = menu.classList.toggle('open');
-        hamburger.classList.toggle('open', isOpen);
-        hamburger.setAttribute('aria-expanded', isOpen);
+        setMenuOpen(!menu.classList.contains('open'));
     });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            setMenuOpen(false);
+            setLeftPaneOpen(false);
+            setQuotePaneOpen(false);
+        }
+    });
+
+    function setLeftPaneOpen(isOpen) {
+        leftPane.classList.toggle('open', isOpen);
+        leftPaneToggle.textContent = isOpen ? '<<' : '>>';
+        leftPaneToggle.setAttribute('aria-expanded', String(isOpen));
+        leftPaneToggle.setAttribute('aria-label', isOpen ? 'Hide additional content' : 'Show additional content');
+    }
+
+    function setQuotePaneOpen(isOpen) {
+        if (isOpen) setLeftPaneOpen(false);
+        quotePane.classList.toggle('open', isOpen);
+        quotePane.setAttribute('aria-hidden', String(!isOpen));
+        quotePane.toggleAttribute('inert', !isOpen);
+        quotePaneToggle.setAttribute('aria-expanded', String(isOpen));
+        quotePaneToggle.setAttribute('aria-label', isOpen ? 'Ukryj cytat' : 'Pokaż cytat');
+        quotePaneToggle.title = isOpen ? 'Ukryj cytat' : 'Pokaż cytat';
+    }
 
     leftPaneToggle.addEventListener('click', function () {
-        const isOpen = leftPane.classList.toggle('open');
-        leftPaneToggle.textContent = isOpen ? '<<' : '>>';
-        leftPaneToggle.setAttribute('aria-expanded', isOpen);
-        leftPaneToggle.setAttribute('aria-label', isOpen ? 'Hide additional content' : 'Show additional content');
+        const isOpen = !leftPane.classList.contains('open');
+        if (isOpen) setQuotePaneOpen(false);
+        setLeftPaneOpen(isOpen);
     });
+
+    quotePaneToggle.addEventListener('click', function () {
+        setQuotePaneOpen(!quotePane.classList.contains('open'));
+    });
+
+    function setCurrentSection(currentId) {
+        const activeLink = menu.querySelector('a[href="#' + currentId + '"]') || menu.querySelector('a[href="#home"]');
+        menu.querySelectorAll('a').forEach(function (link) {
+            const isActive = link === activeLink;
+            link.classList.toggle('active', isActive);
+            if (isActive) link.setAttribute('aria-current', 'page');
+            else link.removeAttribute('aria-current');
+        });
+        breadcrumb.textContent = activeLink.textContent;
+    }
+
+    function updateCurrentSection() {
+        setCurrentSection(window.location.hash.slice(1) || 'home');
+    }
+
+    let scrollUpdatePending = false;
+    window.addEventListener('scroll', function () {
+        if (scrollUpdatePending) return;
+        scrollUpdatePending = true;
+        window.requestAnimationFrame(function () {
+            scrollUpdatePending = false;
+            const activationPoint = 112;
+            let currentSection = sections[0];
+            sections.forEach(function (section) {
+                if (section.getBoundingClientRect().top <= activationPoint) currentSection = section;
+            });
+            setCurrentSection(currentSection.id);
+        });
+    }, { passive: true });
 
     menu.addEventListener('click', function (event) {
-        const link = event.target.closest('a[data-page]');
-        if (!link) return;
-
-        event.preventDefault();
-
-        frame.src = link.getAttribute('data-page');
-
-        menu.querySelectorAll('a').forEach(a => a.classList.remove('active'));
-        link.classList.add('active');
-
-        breadcrumb.textContent = link.textContent;
-
-        menu.classList.remove('open');
-        hamburger.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', false);
+        if (!event.target.closest('a[href^="#"]')) return;
+        setMenuOpen(false);
     });
-</script>
+    window.addEventListener('hashchange', updateCurrentSection);
+    updateCurrentSection();
 
+    function connectLightbox(section, gallerySelector, lightboxId, imageId) {
+        const root = document.getElementById(section);
+        const lightbox = document.getElementById(lightboxId);
+        const lightboxImage = document.getElementById(imageId);
+        root.querySelectorAll(gallerySelector).forEach(function (image) {
+            image.addEventListener('click', function () {
+                lightboxImage.src = image.src;
+                lightboxImage.alt = image.alt;
+                lightbox.hidden = false;
+            });
+        });
+        lightbox.addEventListener('click', function (event) {
+            if (event.target === lightbox) {
+                lightbox.hidden = true;
+                lightboxImage.src = '';
+            }
+        });
+    }
+
+    connectLightbox('about', '.gallery-item img', 'about-lightbox', 'about-lightbox-image');
+    connectLightbox('services', '.gallery-item img', 'services-lightbox', 'services-lightbox-image');
+    connectLightbox('mali-przyjaciele', '.gallery-item img', 'mali-lightbox', 'mali-lightbox-image');
+    connectLightbox('wesole-maluchy', '.gallery-item img', 'wesole-lightbox', 'wesole-lightbox-image');
+    connectLightbox('keep-blue', '.keep-blue-gallery img', 'keep-blue-lightbox', 'keep-blue-lightbox-image');
+    connectLightbox('in-space', '.keep-blue-gallery img', 'in-space-lightbox', 'in-space-lightbox-image');
+
+    (function () {
+        const angelSection = document.getElementById('angel-of-peace');
+        const slides = angelSection.querySelectorAll('.slideshow .slide');
+        const slideButtons = angelSection.querySelectorAll('.angel-slide-list button');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            slideButtons[currentSlide].classList.remove('active');
+            slideButtons[currentSlide].removeAttribute('aria-current');
+            currentSlide = (index + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            slideButtons[currentSlide].classList.add('active');
+            slideButtons[currentSlide].setAttribute('aria-current', 'true');
+        }
+
+        angelSection.querySelector('.slide-control.previous').addEventListener('click', function () { showSlide(currentSlide - 1); });
+        angelSection.querySelector('.slide-control.next').addEventListener('click', function () { showSlide(currentSlide + 1); });
+        slideButtons.forEach(function (button, index) { button.addEventListener('click', function () { showSlide(index); }); });
+        setInterval(function () { showSlide(currentSlide + 1); }, 3000);
+    }());
+
+    (function () {
+        const pageLoader = document.getElementById('page-loader');
+
+        function finishLoading() {
+            document.fonts.ready.then(function () {
+                pageLoader.classList.add('is-loaded');
+                pageLoader.setAttribute('aria-hidden', 'true');
+                pageLoader.inert = true;
+            });
+        }
+
+        if (document.readyState === 'complete') finishLoading();
+        else window.addEventListener('load', finishLoading, { once: true });
+    }());
+</script>
 </body>
 </html>
