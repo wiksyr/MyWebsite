@@ -30,9 +30,11 @@
     <a href="#mali-przyjaciele">Mali Przyjaciele</a>
     <a href="#wesole-maluchy">Wesołe Maluchy</a>
     <a href="#keep-blue">Keep Blue</a>
+    <a href="#miricles">Cuda</a>
     <a href="#terminator">Terminator</a>
     <a href="#angel-of-peace">Angel Of Peace</a>
     <a href="#in-space">In Space</a>
+    <a href="#posluchaj">Posłuchaj</a>
     <a href="#contact">Kontakt</a>
 </nav>
 <aside id="left-pane" aria-label="Additional content">
@@ -52,6 +54,7 @@
     </form>
 </aside>
 <aside id="quote-pane" aria-label="Cytat" aria-hidden="true" inert>
+    <img class="quote-pane-image" src="assets/images/home-of-peace.jpeg" alt="Home of peace">
     <blockquote>
         <p>Weak people <strong>revenge</strong>; Strong <strong>forgive</strong>; Intelligent one <strong>ignore</strong> [eng.]</p>
         <p lang="pl">Ludzie słabi <strong>szukają zemsty</strong>; Ludzie silni <strong>wybaczają</strong>; Ludzie inteligentni <strong>ignorują</strong> [pl.].</p>
@@ -60,15 +63,58 @@
     <hr class="quote-divider">
     <blockquote>Człowiek rodzi się <strong>Zielony</strong> i dorasta do <strong>Błękitu</strong>.<cite><strong>[Adam Mischke]</strong></cite></blockquote>
 </aside>
+<aside id="music-pane" aria-label="Video" aria-hidden="true" inert>
+    <div class="music-pane-inner">
+        <div class="music-pane-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img" aria-label="Video icon">
+                <path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h8A2.5 2.5 0 0 1 17 6.5v11A2.5 2.5 0 0 1 14.5 20h-8A2.5 2.5 0 0 1 4 17.5v-11zm12.5 2.3 4.2-2.5v11.4l-4.2-2.5v-6.4z" fill="currentColor"/>
+            </svg>
+        </div>
+        <h2>Video</h2>
+        <div class="music-pane-videos">
+            <video src="assets/video/Adam_Intro.mp4" controls playsinline loop preload="metadata"></video>
+            <video src="assets/video/Adam_ThunderPower.mp4" controls playsinline loop preload="metadata"></video>
+            <video src="assets/video/Adam_Wniebowzieci.mp4" controls playsinline loop preload="metadata"></video>
+            <video src="assets/video/Adam_BycDzieckiem.mp4" controls playsinline loop preload="metadata"></video>
+        </div>
+    </div>
+</aside>
+<aside id="audio-pane" aria-label="Muzyka" aria-hidden="true" inert>
+    <div class="music-pane-inner">
+        <div class="music-pane-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img" aria-label="Music icon">
+                <path d="M14 3v11.2A3.4 3.4 0 1 0 16.5 17V7.2l6-1.3V3l-8.5 1.8zM14 3v11.2A3.4 3.4 0 1 0 16.5 17V7.2l6-1.3V3l-8.5 1.8z" fill="currentColor"/>
+            </svg>
+        </div>
+        <h2>Muzyka</h2>
+        <div class="music-pane-videos audio-pane-tracks">
+            <audio controls preload="metadata" src="assets/music/AveGladiatora.mpeg"></audio>
+            <audio controls preload="metadata" src="assets/music/AveGladiatora2.mpeg"></audio>
+            <audio controls preload="metadata" src="assets/music/AveGladiatora3.mpeg"></audio>
+            <audio controls preload="metadata" src="assets/music/BlueThunder007.mpeg"></audio>
+            <audio controls preload="metadata" src="assets/music/DoTwojegoSerca.mpeg"></audio>
+            <audio controls preload="metadata" src="assets/music/MojaPasja.mpeg"></audio>
+        </div>
+    </div>
+</aside>
 <button id="left-pane-toggle" type="button" aria-label="Show additional content" aria-expanded="false">&gt;&gt;</button>
 <button id="quote-pane-toggle" type="button" aria-label="Pokaż cytat" aria-expanded="false" aria-controls="quote-pane" title="Pokaż cytat"><span aria-hidden="true">“</span></button>
+<button id="music-pane-toggle" type="button" aria-label="Pokaż video" aria-expanded="false" aria-controls="music-pane" title="Pokaż video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h8A2.5 2.5 0 0 1 17 6.5v11A2.5 2.5 0 0 1 14.5 20h-8A2.5 2.5 0 0 1 4 17.5v-11zm12.5 2.3 4.2-2.5v11.4l-4.2-2.5v-6.4z" fill="currentColor"/></svg></button>
+<button id="audio-pane-toggle" type="button" aria-label="Pokaż muzykę" aria-expanded="false" aria-controls="audio-pane" title="Pokaż muzykę"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v11.2A3.4 3.4 0 1 0 16.5 17V7.2l6-1.3V3l-8.5 1.8zM14 3v11.2A3.4 3.4 0 1 0 16.5 17V7.2l6-1.3V3l-8.5 1.8z" fill="currentColor"/></svg></button>
+<nav id="section-pager" aria-label="Nawigacja po sekcjach" class="section-pager">
+    <button type="button" class="section-pager-button section-pager-prev" aria-label="Poprzednia sekcja">&#8593;</button>
+    <button type="button" class="section-pager-button section-pager-next" aria-label="Następna sekcja">&#8595;</button>
+</nav>
 <main id="content">
     <section id="home" class="page home-page" aria-labelledby="home-title">
         <div class="container home-intro-container">
             <div class="home-intro-content"><h1 id="home-title">Zdobądź dla siebie GROM!</h1><div class="thunder-emoji" aria-hidden="true">⚡</div><h2>Człowiek rodzi się ZIELONY <br> i dorasta do BŁĘKITU.</h2><h3 class="hashes">#BłękitnyGrom007 <br> #BlueThunder007</h3></div>
             <div class="home-photo-container"><img src="assets/images/garaz_adam2.jpeg" alt="Garaż i Błękitny Grom"></div>
         </div>
-        <div class="hashes-container">#SpaceShip <br>#Ship <br>#Sheep <br>#OfWCA <br>#WprostocieZłożonośćPiękna <br>#RelationShip <br>#FreeDom <br>#HomeOfPeace <br>#WorldPeaceSpace <br>#WszystkoToAlgorytm <br>#DoskonałyEliminatorAlgorytmiczny <br>#wDrodze <br>#ŻycieToNieAlgorytm <br>#ŻycieNajważniejsze <br>#OnePassionOneLove <br>#EspressoPower <br></div>
+        <div class="home-feature-video">
+            <video src="assets/video/Adam_Wniebowzieci.mp4" controls playsinline preload="auto"></video>
+        </div>
+        <div class="hashes-container">#SpaceShip <br>#Ship <br>#Sheep <br>#OfWCA <br>#WprostocieZłożonośćPiękna <br>#RelationShip <br>#FreeDom <br>#HomeOfPeace <br>#WorldPeaceSpace <br>#WszystkoToAlgorytm <br>#DoskonałyEliminatorAlgorytmiczny <br>#wDrodze <br>#ŻycieToNieAlgorytm <br>#ŻycieNajważniejsze <br>#OnePassionOneLove <br>#EspressoPower <br> #wDrodze <br/> #Drogowskaz <br/> #AngelOfPeace <br/> #TopGunF25 <br/> #OldSchool25 <br/> #NeverGiveUP <br/> #FreeDom <br/> WorldPeaceSpace <br/> #StarGate <br/><img class="poland-flag-icon" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40'%3E%3Crect width='60' height='40' fill='%23fff'/%3E%3Crect y='20' width='60' height='20' fill='%23dc143c'/%3E%3C/svg%3E" alt="Polish flag" aria-label="Polish flag" /> <br/> #WprostocieZłożonośćPiękna <br/> #PośpiechZabija <br/></div>
         <a class="coffee-button" href="https://buycoffee.to/blekitnygrom007" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="20" height="20" fill="#fff" aria-hidden="true"><path d="M2 21h18v-2H2v2zM20 8h-2V5H4v9c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-1h2c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 4h-2v-2h2v2z"/></svg>Wspieram Cię Gromie! Stawiam Kawę!</a>
     </section>
 
@@ -103,7 +149,7 @@
         <hr class="divider">
         <h2 id="mali-title">Mali Przyjaciele</h2><h3>Zdjęcia z małych spotkań</h3>
         <div class="gallery">
-            <div class="gallery-item"><img src="assets/images/dwa_charaktery.jpeg" alt="dwa charaktery"><div class="overlay"><h3>DWA CHARAKTERY</h3><p>Z natury każdy maluch odzwierciedla nieco swoim wyglądem charakter właściciela, co dwa charaktery, to dwa różne maluchy.</p></div></div>
+            <div class="gallery-item"><img src="assets/images/dwa_charaktery.jpeg" alt="dwa charaktery"><div class="overlay"><h3>DWA CHARAKTERY</h3><p>Łódź i Warszawa naprawdę mogą żyć w zgodzie.</p></div></div>
             <div class="gallery-item"><img src="assets/images/maluch_wysciogowy.jpg" alt="maluch wysciogowy"><div class="overlay"><h3>Maluch-Luxus-Pewexu</h3><p>Maluch, który uwielbia prędkość i rywalizację, zawsze gotowy do wyścigów.</p></div></div>
             <div class="gallery-item"><img src="assets/images/nasza_blyskawica.png" alt="nasza blyskawica"><div class="overlay"><h3>NASZA BŁYSKAWICA</h3><p>Nasza błyskawica, szybka i energiczna, zawsze w ruchu.</p></div></div>
             <div class="gallery-item"><img src="assets/images/maluch_tragarz.jpg" alt="maluch tragarz"><div class="overlay"><h3>MALUCH TRAGARZ</h3><p>Maluch tragarz, silny i wytrwały, zawsze gotowy do pracy.</p></div></div>
@@ -127,11 +173,41 @@
 
     <section id="keep-blue" class="page dark-page keep-blue-page" aria-labelledby="keep-blue-title">
         <hr class="divider">
-        <h1 id="keep-blue-title">Trzymaj się błękitu</h1>
+        <h1 id="keep-blue-title">Trzymaj się BŁĘKITY</h1>
         <div class="gallery keep-blue-gallery">
-            <div class="gallery-item"><img src="assets/images/1-2.jpeg" alt="Space and peace"></div><div class="gallery-item"><img src="assets/images/2-2.jpeg" alt="Home of peace"></div><div class="gallery-item"><img src="assets/images/3-2.jpeg" alt="Motto number 2"></div><div class="gallery-item"><img src="assets/images/4-1.jpeg" alt="Motto number 6"></div><div class="gallery-item"><img src="assets/images/motto-nr-2.jpeg" alt="Fiat in space"></div><div class="gallery-item"><img src="assets/images/motto-nr-6.jpeg" alt="Mój Grom"></div>
+            <div class="gallery-item"><img src="assets/images/1-2.jpeg" alt="Space and peace"></div><div class="gallery-item"><img src="assets/images/2-2.jpeg" alt="Home of peace"></div><div class="gallery-item"><img src="assets/images/3-2.jpeg" alt="Motto number 2"></div><div class="gallery-item"><img src="assets/images/motto-nr-2.jpeg" alt="Motto number 6"></div><div class="gallery-item"><img src="assets/images/4-1.jpeg" alt="Fiat in space"></div><div class="gallery-item"><img src="assets/images/motto-nr-6.jpeg" alt="Mój Grom"></div><div class="gallery-item matrix-item"><img src="assets/images/matrix.jpeg" alt="Matrix"></div>
         </div>
         <div id="keep-blue-lightbox" class="image-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image" hidden><img id="keep-blue-lightbox-image" src="" alt=""></div>
+    </section>
+
+    <section id="miricles" class="page dark-page miricles-page" aria-labelledby="miricles-title">
+        <hr class="divider">
+        <h1 id="miricles-title">Cuda</h1>
+        <div class="angel-slideshow">
+            <div class="angel-slide-frame">
+                <button class="slide-control previous" type="button" aria-label="Previous slide">&#8592;</button>
+                <div class="slideshow">
+                    <figure class="slide active">
+                        <img src="assets/images/7.jpeg" alt="Miricles slide 1">
+                        <figcaption>Gdy z małego projektu...</figcaption>
+                    </figure>
+                    <figure class="slide">
+                        <img src="assets/images/6.jpeg" alt="Miricles slide 2">
+                        <figcaption>I odrobiny myślenia...</figcaption>
+                    </figure>
+                    <figure class="slide">
+                        <img src="assets/images/3.jpeg" alt="Miricles slide 3">
+                        <figcaption>Powstają kosmiczne rzeczy!</figcaption>
+                    </figure>
+                </div>
+                <button class="slide-control next" type="button" aria-label="Next slide">&#8594;</button>
+            </div>
+            <ol class="angel-slide-list" aria-label="Choose a slide">
+                <li><button type="button" class="active" aria-current="true" aria-label="Show slide 1"><img src="assets/images/7.jpeg" alt=""></button></li>
+                <li><button type="button" aria-label="Show slide 2"><img src="assets/images/6.jpeg" alt=""></button></li>
+                <li><button type="button" aria-label="Show slide 3"><img src="assets/images/3.jpeg" alt=""></button></li>
+            </ol>
+        </div>
     </section>
 
     <section id="terminator" class="page dark-page terminator-page" aria-labelledby="terminator-title">
@@ -146,7 +222,6 @@
         <div class="angel-slideshow"><div class="angel-slide-frame"><button class="slide-control previous" type="button" aria-label="Previous slide">&#8592;</button><div class="slideshow"><figure class="slide active"><img src="assets/images/1-1.jpeg" alt="Slide 1"></figure><figure class="slide"><img src="assets/images/2-1.jpeg" alt="Slide 2"></figure><figure class="slide"><img src="assets/images/3-1.jpeg" alt="Slide 3"></figure></div><button class="slide-control next" type="button" aria-label="Next slide">&#8594;</button></div>
             <ol class="angel-slide-list" aria-label="Choose a slide"><li><button type="button" class="active" aria-current="true" aria-label="Show slide 1"><img src="assets/images/1-1.jpeg" alt=""></button></li><li><button type="button" aria-label="Show slide 2"><img src="assets/images/2-1.jpeg" alt=""></button></li><li><button type="button" aria-label="Show slide 3"><img src="assets/images/3-1.jpeg" alt=""></button></li></ol>
         </div>
-        <hr class="divider"><div class="angel-description"><img class="angel-description-logo" src="assets/logo/logo.png" alt="Błękitny Grom"><p>#wDrodze</p><p>#Drogowskaz</p><p>#AngelOfPeace</p><p>#TopGunF25</p><p>#OldSchool25</p><p>#NeverGiveUP</p><p>#FreeDom</p><p>#HomeOfPeace</p><p>#WorldPeaceSpace</p><p>#StarGate</p><p>#WprostocieZłożonośćPiękna</p><p>#ŻycieNajważniejsze</p><p>Człowiek rodzi się Zielony i dorasta do Błękitu.</p><p>#PośpiechZabija</p><p>#OnePassionOneLove</p></div>
     </section>
 
     <section id="in-space" class="page dark-page keep-blue-page" aria-labelledby="in-space-title">
@@ -166,7 +241,9 @@
 </main>
 <footer class="site-footer">
     <span>Błękitny-Grom007</span>
-    <img class="site-footer-image" src="assets/images/klucze.png" alt="Klucze">
+    <a href="https://www.facebook.com/share/1HwCN4TLzY/" target="_blank" rel="noopener noreferrer" aria-label="AMDK on Facebook">
+        <img class="site-footer-image" src="assets/images/amdk_logo.jpeg" alt="Klucze">
+    </a>
     <a href="#home">Powrót na górę</a>
 </footer>
 
@@ -179,6 +256,12 @@
     const leftPaneToggle = document.getElementById('left-pane-toggle');
     const quotePane = document.getElementById('quote-pane');
     const quotePaneToggle = document.getElementById('quote-pane-toggle');
+    const musicPane = document.getElementById('music-pane');
+    const musicPaneToggle = document.getElementById('music-pane-toggle');
+    const audioPane = document.getElementById('audio-pane');
+    const audioPaneToggle = document.getElementById('audio-pane-toggle');
+    const sectionPagerPrev = document.querySelector('.section-pager-prev');
+    const sectionPagerNext = document.querySelector('.section-pager-next');
     const sections = Array.from(document.querySelectorAll('#content > .page'));
 
     function setColorsInverted(isInverted) {
@@ -239,6 +322,8 @@
             setMenuOpen(false);
             setLeftPaneOpen(false);
             setQuotePaneOpen(false);
+            setMusicPaneOpen(false);
+            setAudioPaneOpen(false);
         }
     });
 
@@ -250,7 +335,10 @@
     }
 
     function setQuotePaneOpen(isOpen) {
-        if (isOpen) setLeftPaneOpen(false);
+        if (isOpen) {
+            setLeftPaneOpen(false);
+            setMusicPaneOpen(false);
+        }
         quotePane.classList.toggle('open', isOpen);
         quotePane.setAttribute('aria-hidden', String(!isOpen));
         quotePane.toggleAttribute('inert', !isOpen);
@@ -259,14 +347,54 @@
         quotePaneToggle.title = isOpen ? 'Ukryj cytat' : 'Pokaż cytat';
     }
 
+    function setMusicPaneOpen(isOpen) {
+        if (isOpen) {
+            setLeftPaneOpen(false);
+            setQuotePaneOpen(false);
+            setAudioPaneOpen(false);
+        }
+        musicPane.classList.toggle('open', isOpen);
+        musicPane.setAttribute('aria-hidden', String(!isOpen));
+        musicPane.toggleAttribute('inert', !isOpen);
+        musicPaneToggle.setAttribute('aria-expanded', String(isOpen));
+        musicPaneToggle.setAttribute('aria-label', isOpen ? 'Ukryj video' : 'Pokaż video');
+        musicPaneToggle.title = isOpen ? 'Ukryj video' : 'Pokaż video';
+    }
+
+    function setAudioPaneOpen(isOpen) {
+        if (isOpen) {
+            setLeftPaneOpen(false);
+            setQuotePaneOpen(false);
+            setMusicPaneOpen(false);
+        }
+        audioPane.classList.toggle('open', isOpen);
+        audioPane.setAttribute('aria-hidden', String(!isOpen));
+        audioPane.toggleAttribute('inert', !isOpen);
+        audioPaneToggle.setAttribute('aria-expanded', String(isOpen));
+        audioPaneToggle.setAttribute('aria-label', isOpen ? 'Ukryj muzykę' : 'Pokaż muzykę');
+        audioPaneToggle.title = isOpen ? 'Ukryj muzykę' : 'Pokaż muzykę';
+    }
+
     leftPaneToggle.addEventListener('click', function () {
         const isOpen = !leftPane.classList.contains('open');
-        if (isOpen) setQuotePaneOpen(false);
+        if (isOpen) {
+            setQuotePaneOpen(false);
+            setMusicPaneOpen(false);
+            setAudioPaneOpen(false);
+        }
         setLeftPaneOpen(isOpen);
     });
 
     quotePaneToggle.addEventListener('click', function () {
         setQuotePaneOpen(!quotePane.classList.contains('open'));
+    });
+
+    musicPaneToggle.addEventListener('click', function () {
+        setMusicPaneOpen(!musicPane.classList.contains('open'));
+    });
+
+    audioPaneToggle.addEventListener('click', function () {
+        setAudioPaneOpen(!audioPane.classList.contains('open'));
     });
 
     function setCurrentSection(currentId) {
@@ -283,6 +411,36 @@
     function updateCurrentSection() {
         setCurrentSection(window.location.hash.slice(1) || 'home');
     }
+
+    function goToSectionByOffset(offset) {
+        if (!sections.length) return;
+
+        const currentHash = (window.location.hash || '#home').slice(1) || 'home';
+        let currentIndex = sections.findIndex(function (section) {
+            return section.id === currentHash;
+        });
+
+        if (currentIndex === -1) {
+            currentIndex = 0;
+        }
+
+        const nextIndex = Math.min(sections.length - 1, Math.max(0, currentIndex + offset));
+        const targetSection = sections[nextIndex];
+
+        if (!targetSection) return;
+
+        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.replaceState(null, '', '#' + targetSection.id);
+        setCurrentSection(targetSection.id);
+    }
+
+    sectionPagerPrev.addEventListener('click', function () {
+        goToSectionByOffset(-1);
+    });
+
+    sectionPagerNext.addEventListener('click', function () {
+        goToSectionByOffset(1);
+    });
 
     let scrollUpdatePending = false;
     window.addEventListener('scroll', function () {
@@ -333,40 +491,69 @@
     connectLightbox('in-space', '.keep-blue-gallery img', 'in-space-lightbox', 'in-space-lightbox-image');
 
     (function () {
-        const angelSection = document.getElementById('angel-of-peace');
-        const slides = angelSection.querySelectorAll('.slideshow .slide');
-        const slideButtons = angelSection.querySelectorAll('.angel-slide-list button');
-        let currentSlide = 0;
+        function initSlideshow(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (!section) return;
 
-        function showSlide(index) {
-            slides[currentSlide].classList.remove('active');
-            slideButtons[currentSlide].classList.remove('active');
-            slideButtons[currentSlide].removeAttribute('aria-current');
-            currentSlide = (index + slides.length) % slides.length;
-            slides[currentSlide].classList.add('active');
-            slideButtons[currentSlide].classList.add('active');
-            slideButtons[currentSlide].setAttribute('aria-current', 'true');
+            const slides = section.querySelectorAll('.slideshow .slide');
+            const slideButtons = section.querySelectorAll('.angel-slide-list button');
+            if (!slides.length || !slideButtons.length) return;
+
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides[currentSlide].classList.remove('active');
+                slideButtons[currentSlide].classList.remove('active');
+                slideButtons[currentSlide].removeAttribute('aria-current');
+                currentSlide = (index + slides.length) % slides.length;
+                slides[currentSlide].classList.add('active');
+                slideButtons[currentSlide].classList.add('active');
+                slideButtons[currentSlide].setAttribute('aria-current', 'true');
+            }
+
+            section.querySelector('.slide-control.previous').addEventListener('click', function () { showSlide(currentSlide - 1); });
+            section.querySelector('.slide-control.next').addEventListener('click', function () { showSlide(currentSlide + 1); });
+            slideButtons.forEach(function (button, index) { button.addEventListener('click', function () { showSlide(index); }); });
+            setInterval(function () { showSlide(currentSlide + 1); }, 3000);
         }
 
-        angelSection.querySelector('.slide-control.previous').addEventListener('click', function () { showSlide(currentSlide - 1); });
-        angelSection.querySelector('.slide-control.next').addEventListener('click', function () { showSlide(currentSlide + 1); });
-        slideButtons.forEach(function (button, index) { button.addEventListener('click', function () { showSlide(index); }); });
-        setInterval(function () { showSlide(currentSlide + 1); }, 3000);
+        initSlideshow('angel-of-peace');
+        initSlideshow('miricles');
     }());
 
     (function () {
         const pageLoader = document.getElementById('page-loader');
+        const homeVideo = document.querySelector('#home .home-feature-video video');
 
-        function finishLoading() {
-            document.fonts.ready.then(function () {
-                pageLoader.classList.add('is-loaded');
-                pageLoader.setAttribute('aria-hidden', 'true');
-                pageLoader.inert = true;
-            });
+        function hideLoader() {
+            if (!pageLoader || pageLoader.classList.contains('is-loaded')) return;
+
+            pageLoader.classList.add('is-loaded');
+            pageLoader.setAttribute('aria-hidden', 'true');
+            pageLoader.inert = true;
         }
 
-        if (document.readyState === 'complete') finishLoading();
-        else window.addEventListener('load', finishLoading, { once: true });
+        if (homeVideo) {
+            const preloadVideo = document.createElement('video');
+            preloadVideo.preload = 'auto';
+            preloadVideo.muted = true;
+            preloadVideo.playsInline = true;
+            preloadVideo.src = homeVideo.src;
+
+            const finishLoading = function () {
+                window.setTimeout(hideLoader, 200);
+            };
+
+            preloadVideo.addEventListener('canplaythrough', finishLoading, { once: true });
+            preloadVideo.addEventListener('loadeddata', finishLoading, { once: true });
+            preloadVideo.addEventListener('error', finishLoading, { once: true });
+            preloadVideo.load();
+
+            window.setTimeout(finishLoading, 2500);
+            return;
+        }
+
+        window.setTimeout(hideLoader, 600);
     }());
 </script>
 </body>
