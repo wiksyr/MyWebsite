@@ -1311,7 +1311,6 @@ body.keep-blue-page > .divider {
     aspect-ratio: 4 / 3;
     object-fit: cover;
     cursor: zoom-in;
-    filter: none;
     opacity: 1;
 }
 
