@@ -428,6 +428,10 @@ a {
     transform: translateX(0);
 }
 
+.drawer > * {
+    flex-shrink: 0;
+}
+
 .drawer-title,
 .pane-heading {
     margin: 0;
@@ -476,8 +480,7 @@ a {
 
 .pane-card img {
     width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
+    height: auto;
 }
 
 .pane-card figcaption {
@@ -496,9 +499,8 @@ a {
 
 .pane-image {
     width: 100%;
+    height: auto;
     border-radius: var(--radius);
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
 }
 
 .quote {
