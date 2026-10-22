@@ -721,6 +721,29 @@ iframe {
     font-size: 14px;
 }
 
+.site-footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.visit-counter {
+    color: #bbb;
+    font-size: 13px;
+}
+
+.visit-counter[hidden] {
+    display: none;
+}
+
+.visit-counter strong {
+    color: coral;
+}
+
+html.color-inverted .visit-counter strong {
+    color: var(--coral-inverted);
+}
+
 .site-footer-image {
     justify-self: center;
     width: auto;

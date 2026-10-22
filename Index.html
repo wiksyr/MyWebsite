@@ -116,7 +116,7 @@
         <div class="home-feature-video">
             <video src="assets/video/Adam_Wniebowzieci.mp4" controls playsinline preload="auto"></video>
         </div>
-        <div class="hashes-container">#SpaceShip <br>#Ship <br>#Sheep <br>#OfWCA <br>#WprostocieZłożonośćPiękna <br>#RelationShip <br>#FreeDom <br>#HomeOfPeace <br>#WszystkoToAlgorytm <br>#DoskonałyEliminatorAlgorytmiczny <br>#ŻycieToNieAlgorytm <br>#ŻycieNajważniejsze <br>#OnePassionOneLove <br>#EspressoPower <br> #wDrodze <br/> #Drogowskaz <br/> #AngelOfPeace <br/> #TopGunF25 <br/> #OldSchool25 <br/> #NeverGiveUP <br/> #FreeDom <br/> #WorldPeaceSpace <br/> #StarGate <br/><img class="poland-flag-icon" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40'%3E%3Crect width='60' height='40' fill='%23fff'/%3E%3Crect y='20' width='60' height='20' fill='%23dc143c'/%3E%3C/svg%3E" alt="Polish flag" aria-label="Polish flag" /> <br/> #WprostocieZłożonośćPiękna <br/> #PośpiechZabija <br/></div>
+        <div class="hashes-container">#SpaceShip <br> #CustomEdenGarage <br/>#Ship <br>#Sheep <br>#OfWCA <br>#WprostocieZłożonośćPiękna <br>#RelationShip <br>#FreeDom <br>#HomeOfPeace <br>#WszystkoToAlgorytm <br>#DoskonałyEliminatorAlgorytmiczny <br>#ŻycieToNieAlgorytm <br>#ŻycieNajważniejsze <br>#OnePassionOneLove <br>#EspressoPower <br> #wDrodze <br/> #Drogowskaz <br/> #AngelOfPeace <br/> #TopGunF25 <br/> #OldSchool25 <br/> #NeverGiveUP <br/> #FreeDom <br/> #WorldPeaceSpace <br/> #StarGate <br/><img class="poland-flag-icon" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40'%3E%3Crect width='60' height='40' fill='%23fff'/%3E%3Crect y='20' width='60' height='20' fill='%23dc143c'/%3E%3C/svg%3E" alt="Polish flag" aria-label="Polish flag" /> <br/> #WprostocieZłożonośćPiękna <br/> #PośpiechZabija <br/></div>
         <a class="coffee-button" href="https://buycoffee.to/blekitnygrom007" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="20" height="20" fill="#fff" aria-hidden="true"><path d="M2 21h18v-2H2v2zM20 8h-2V5H4v9c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-1h2c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 4h-2v-2h2v2z"/></svg>Wspieram Cię Gromie! Stawiam Kawę!</a>
     </section>
 
@@ -251,7 +251,10 @@
     </section>
 </main>
 <footer class="site-footer">
-    <span>Błękitny-Grom007</span>
+    <div class="site-footer-brand">
+        <span>Błękitny-Grom007</span>
+        <span id="visit-counter" class="visit-counter" hidden>Odwiedziny: <strong>…</strong></span>
+    </div>
     <a href="https://www.facebook.com/share/1HwCN4TLzY/" target="_blank" rel="noopener noreferrer" aria-label="AMDK on Facebook">
         <img class="site-footer-image" src="assets/images/amdk_logo.jpeg" alt="Klucze">
     </a>
@@ -569,5 +572,20 @@
 </script>
 <script data-goatcounter="https://blekitnygrom.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+<script>
+    (function () {
+        const visitCounter = document.getElementById('visit-counter');
+        fetch('https://blekitnygrom.goatcounter.com/counter/TOTAL.json')
+            .then(function (response) {
+                if (!response.ok) throw new Error('Counter unavailable');
+                return response.json();
+            })
+            .then(function (data) {
+                visitCounter.querySelector('strong').textContent = data.count;
+                visitCounter.hidden = false;
+            })
+            .catch(function () {});
+    }());
+</script>
 </body>
 </html>
